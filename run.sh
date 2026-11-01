@@ -2,7 +2,8 @@
 # Sherlock OSINT & Due Diligence Runner
 set -e
 
-DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+SCRIPT_PATH="$(readlink -f "${BASH_SOURCE[0]}")"
+DIR="$(cd "$(dirname "$SCRIPT_PATH")" && pwd)"
 cd "$DIR"
 
 # Ensure venv exists
